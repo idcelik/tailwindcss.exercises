@@ -1,0 +1,20 @@
+@config "./tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+@layer components {
+  .nav-link {
+    @apply flex items-center h-10 px-3 text-sm font-medium transition-colors rounded text-idcelik hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white;
+  }
+  .nav-link.active {
+    @apply text-white bg-idcelik;
+  }
+}
